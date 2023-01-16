@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 def uppercase(str):
     n = 0
-    for i in range (0, len(str)):
-        if 96 < ord(str[i]) < 122:
-           n = 32
+    for i in range(0, len(str)):
+        if 96 < ord(str[i]) < 123:
+            n = 32
         else:
             n = 0
         if i == (len(str) - 1):
