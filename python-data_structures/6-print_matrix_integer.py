@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 def print_matrix_integer(matrix=[[]]):
-    if matrix is None:
+    if len(matrix) == 0:
         print("")
         return None
     for i in range(0, len(matrix)):
