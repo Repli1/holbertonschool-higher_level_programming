@@ -32,7 +32,7 @@ class Square():
             raise TypeError("position must be a tuple of 2 positive integers")
         if type(array[0]) is not int or type(array[1]) is not int:
             raise TypeError("position must be a tuple of 2 positive integers")
-        if array[0] < 0 or array [1] < 0:
+        if array[0] < 0 or array[1] < 0:
             raise TypeError("position must be a tuple of 2 positive integers")
         self._Square__position = array
 
@@ -40,13 +40,14 @@ class Square():
         return self._Square__size**2
 
     def my_print(self):
-        for l in range(0, self._Square__position[1]):
-            print("")
-        for j in range(0, self._Square__size):
-            for k in range(0, self._Square__position[0]):
-                print(" ", end="")
-            for i in range(1, self._Square__size):
-                print("#", end="")
-            print("#")
-        if self._Square__size == 0:
+        if self._Square__size != 0:
+            for l in range(0, self._Square__position[1]):
+                print("")
+            for j in range(0, self._Square__size):
+                for k in range(0, self._Square__position[0]):
+                    print(" ", end="")
+                for i in range(1, self._Square__size):
+                    print("#", end="")
+                print("#")
+        else:
             print("")
