@@ -1,5 +1,20 @@
-
 >>> BaseGeometry = __import__("7-base_geometry").BaseGeometry
 >>> base_geo = BaseGeometry()
 
 >>> base_geo.area()
+Traceback (most recent call last):
+Exception: area() is not implemented
+
+>>> base_geo.integer_validator("an_int", 42)
+
+>>> base_geo.integer_validator("a_float", 42.5)
+Traceback (most recent call last):
+TypeError: a_float must be an integer
+
+>>> base_geo.integer_validator("a_string", "Hello")
+Traceback (most recent call last):
+TypeError: a_string must be an integer
+
+>>> base_geo.integer_validator("a_negative", -42)
+Traceback (most recent call last):
+ValueError: a_negative must be greater than 0
