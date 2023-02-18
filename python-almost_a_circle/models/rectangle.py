@@ -70,7 +70,9 @@ class Rectangle(Base):
         if self.__width == 0 or self.__height == 0:
             print("")
         else:
-            print((self.__width * "#" + '\n') * self.__height, end="")
+            string = self.__x * " " + self.__width * "#" + '\n'
+            print('\n' * self.__y + string * self.__height, end="")
 
     def __str__(self):
-        return f"[Rectangle] ({self.id}) {self.__x}/{self.__y} - {self.__width}/{self.__height}"
+        return f"[Rectangle] ({self.id}) {self.__x}/{self.__y}
+        - {self.__width} {self.__height}"
