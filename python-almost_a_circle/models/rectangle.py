@@ -88,4 +88,4 @@ class Rectangle(Base):
                 i += 1
         elif kwargs:
             for element in kwargs:
-                setattr(self, element, element.value())
+                setattr(self, element, kwargs[element])
