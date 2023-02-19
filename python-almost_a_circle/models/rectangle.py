@@ -80,7 +80,7 @@ class Rectangle(Base):
 
     def update(self, *args, **kwargs):
         """Attribute updater"""
-        attributes = ["id", "__width", "__height", "__x", "__y"]
+        attributes = ["id", "width", "height", "x", "y"]
         i = 0
         if args and len(args) > 0:
             for element in args:
@@ -88,4 +88,4 @@ class Rectangle(Base):
                 i += 1
         elif kwargs:
             for element in kwargs:
-                setattr(self, attributes[i], element.value())
+                setattr(self, element, element.value())
