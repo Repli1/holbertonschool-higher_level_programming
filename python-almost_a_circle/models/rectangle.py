@@ -79,6 +79,7 @@ class Rectangle(Base):
         return string2
 
     def update(self, *args, **kwargs):
+        """Attribute updater"""
         attributes = ["id", "__width", "__height", "__x", "__y"]
         i = 0
         if args and len(args) > 0:
