@@ -1,0 +1,21 @@
+
+>>> Square = __import__("square").square
+
+>>> square = Square(1, 2)
+>>> square = Square(1, 2, 3)
+>>> square = Square(1)
+>>> square = Square("1")
+>>> square = Square(1, "2")
+>>> square = Square(1, 2, "3")
+>>> square = Square(1, 2, 3, "4")
+>>> square = Square(-1)
+>>> square = Square(1, -2)
+>>> square = Square(0)
+>>> square = Square(1, 2, -3)
+>>> print(Square)
+>>> square.to_dictionary()
+>>> square.update()
+>>> square.update(89)
+>>> square.update(89, 1)
+>>> square.update(89, 1, 2)
+>>> square.update(89, 1, 2, 3)

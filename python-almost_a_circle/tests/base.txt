@@ -1,0 +1,15 @@
+
+>>> Base = __import__("base").Base
+
+>>> base = Base()
+>>> base1 = Base()
+>>> base2 = Base(12)
+>>> base3 = Base()
+>>> print(base.id)
+>>> print(base1.id)
+>>> print(base2.id)
+>>> print(base3.id)
+1
+2
+12
+3
