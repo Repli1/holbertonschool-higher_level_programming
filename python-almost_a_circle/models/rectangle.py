@@ -91,5 +91,6 @@ class Rectangle(Base):
                 setattr(self, element, kwargs[element])
 
     def to_dictionary(self):
+        """Dictionary representation"""
         return {"id": self.id, "width": self.__width, "height": self.__height,
                 "x": self.__x, "y": self.__y}
