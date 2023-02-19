@@ -77,3 +77,14 @@ class Rectangle(Base):
         string2 = f"[Rectangle] ({self.id}) {self.__x}/{self.__y}"
         string2 += f" - {self.__width}/{self.__height}"
         return string2
+
+    def update(self, *args, **kwargs):
+        attributes = ["id", "__width", "__height", "__x", "__y"]
+        i = 0
+        if args and len(args) > 0:
+            for element in args:
+                setattr(self, attributes[i], element)
+                i += 1
+        elif kwargs:
+            for element in kwargs:
+                setattr(self, attributes[i], element.value())
