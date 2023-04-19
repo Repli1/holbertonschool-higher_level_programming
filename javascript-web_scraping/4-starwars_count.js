@@ -9,7 +9,7 @@ request(url, function (error, response, body) {
     const result = JSON.parse(body);
     const wedge = 'https://swapi-api.hbtn.io/api/people/18/';
     let count = 0;
-    for (let i = 0; i < result.count; i++) {
+    for (let i = 0; result.results[i] !== undefined; i++) {
       if (result.results[i].characters.includes(wedge)) {
         count++;
       }
